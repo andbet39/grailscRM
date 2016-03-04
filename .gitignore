@@ -1,6 +1,3 @@
 build/
-.gradle/
 .idea
-grails-app/assets/bower
-node_modules
 
