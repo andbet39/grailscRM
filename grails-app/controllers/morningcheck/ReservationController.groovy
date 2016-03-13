@@ -10,7 +10,7 @@ class ReservationController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Reservation.list(params), model:[reservationCount: Reservation.count()]
+        respond Reservation.list(), model:[reservationCount: Reservation.count()]
     }
 
     def show(Reservation reservation) {

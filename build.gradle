@@ -75,6 +75,8 @@ dependencies {
     assets "com.craigburke.angular:angular-annotate-asset-pipeline:2.4.0"
     assets "com.craigburke:js-closure-wrap-asset-pipeline:1.2.0"
     compile "org.apache.commons:commons-csv:1.2"
+    compile fileTree(dir: 'lib', include: ['*.jar'])
+    compile 'joda-time:joda-time:2.9.2'
 }
 
 task wrapper(type: Wrapper) {
