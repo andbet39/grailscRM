@@ -116,6 +116,8 @@
                     </li>
                     <li>
                         <g:link controller="database" action="index"> <i class="fa fa-dashboard fa-fw"></i> Database</g:link>
+                    </li> <li>
+                        <g:link controller="wubook" action="index"> <i class="fa fa-dashboard fa-fw"></i> Wubook</g:link>
                     </li>
                 </ul>
             </div>

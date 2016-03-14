@@ -17,9 +17,25 @@ class WubookController {
         redirect(controller: "wubook", action: "index")
 
     }
-    def wubookreseervation(){
-        wubookService.aquirereservation()
+    def wubookreservation(){
+        log.info(params.date_from.toString())
+        log.info(params.date_to.toString())
+
+
+        wubookService.aquirereservation(params.date_from,params.date_to)
         redirect(controller: "wubook", action: "index")
 
     }
+
+    def wubooknewreservation(){
+
+
+        wubookService.aquirenewreservation()
+        redirect(controller: "wubook", action: "index")
+
+    }
+
+
+
+
 }

@@ -47,7 +47,7 @@ class ReservationService {
 
            def old=ReservationNight.findByRes_code(res.reservation_code)
 
-           if(old ==null) {
+           if(old == null) {
 
                DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy");
                DateTime start_dt = formatter.parseDateTime(res.date_arrival);
@@ -68,7 +68,7 @@ class ReservationService {
                    for (room in roomList) {
                        log.info("Fetching room " + room)
                        def r = Room.findById(room)
-                       def res_night = new ReservationNight(date: d, baseReservation: res, customer: cust, room: r)
+                       def res_night = new ReservationNight(date: d, baseReservation: res, customer: cust, room: r,res_code: res.reservation_code)
                        res_night.save(flush: true)
                        if (res_night.errors)
                            log.info(res_night.errors)
