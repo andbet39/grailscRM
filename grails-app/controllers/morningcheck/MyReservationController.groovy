@@ -1,5 +1,6 @@
 package morningcheck
 
+import grails.converters.JSON
 import oracle.jdbc.driver.DatabaseError
 
 class MyReservationController {
@@ -7,10 +8,15 @@ class MyReservationController {
     def index() {}
 
     def todaypresent(){
-        def date = new Date()
 
-        def today = ReservationNight.findAllByDateBetween(date-240,date)
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        cal.add(Calendar.DATE, -3);
+        Date dateBefore1Days = cal.getTime();
 
-        respond model:['todayList':today]
+        def today = ReservationNight.findAllByDateBetween(dateBefore1Days,new Date())
+
+        respond today,model:['todayList':today]
+
     }
 }
