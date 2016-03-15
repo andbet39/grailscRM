@@ -82,7 +82,7 @@ class ReservationWobook {
     String customer_address
     String customer_language
     String customer_zip
-    String  rooms
+    String rooms
     String roomnight
     String room_opportunities
     String opportunities

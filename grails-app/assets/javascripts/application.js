@@ -5,8 +5,8 @@
 // You're free to add application-wide JavaScript to this file, but it's generally better
 // to create separate JavaScript files as needed.
 //
-//= require jquery-2.2.0.min
-//= require bootstrap
+//= require jquery/jquery.js
+//= require bootstrap/bootstrap.js
 //= require metisMenu/dist/metisMenu.js
 //= require datatables/media/js/jquery.dataTables.min.js
 //= require datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js

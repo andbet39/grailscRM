@@ -140,8 +140,8 @@ class WubookService {
         params.addElement(lcode);
         params.addElement(formatter.format(from));
         params.addElement(formatter.format(to));
-        params.addElement("0");
         params.addElement("1");
+        params.addElement("0");
 
         log.info(params.toString());
 
